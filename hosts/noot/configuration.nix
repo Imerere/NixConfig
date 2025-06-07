@@ -26,7 +26,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "noot"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Enable experimental features
   nix.settings.experimental-features = ["nix-command" "flakes"];
@@ -59,11 +59,10 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-  # Enable the Hyprland Desktop Environment.
-  programs.hyprland = {
-    enable = true;
-    withUWSM = true;
-  };
+  # Enable the KDE Plasma Desktop Environment.
+  services.displayManager.sddm.enable=true;
+  services.desktopManager.plasma6.enable = true;
+
 
   # Enable gamemode
   programs.gamemode.enable = true;
@@ -76,7 +75,7 @@
 
   # Configure keymap in X11
   services.xserver.xkb = {
-    layout = "us";
+    layout = "gb";
     variant = "";
   };
 
@@ -87,7 +86,6 @@
   # xdg-portal
   xdg.portal = {
     enable = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
   };
 
   # Enable CUPS to print documents.
@@ -127,14 +125,6 @@
     };
   };
 
-  # SUNSHINE REMOTE DESKTOP
-  services.sunshine = {
-    enable = true;
-    autoStart = true;
-    capSysAdmin = true;
-    openFirewall = true;
-  };
-
   # Add certificates
   security.pki.certificates = [(builtins.readFile config/certificates/mitmproxy-ca-cert.pem)];
 
@@ -170,30 +160,16 @@
     "python-2.7.18.8"
   ];
   environment.systemPackages =  with pkgs; [
-  (pkgs.callPackage ./config/sddm/sddm-astronaut.nix {
-    theme = "hyprland_kath";
-    themeConfig={
-        General = {
-        HeaderText ="Hi Imere!";
-              FontSize="10.0";
-            };
-        };
-      })
     ffmpeg
     rar
     p7zip
     starship
-    wlogout
     gvfs
-    libnotify
     gtk3
     gtk4
     cairo
     glib
     pango
-    hyprlock
-    hyprcursor
-    hyprpolkitagent
     appimage-run
     pavucontrol
     git
@@ -213,16 +189,6 @@
     nodejs_24
   ];
 
-  services.displayManager.sddm = {
-    enable = true;
-    package = pkgs.kdePackages.sddm;
-    theme = "sddm-astronaut-theme";
-    extraPackages = with pkgs; [
-      kdePackages.qtmultimedia
-      kdePackages.qtsvg
-      kdePackages.qtvirtualkeyboard
-    ];
-  };
 
   systemd.packages = with pkgs; [ lact ];
   systemd.services.lactd.wantedBy = ["multi-user.target"];

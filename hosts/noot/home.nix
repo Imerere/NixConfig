@@ -29,32 +29,19 @@
     parsec-bin
     inputs.zen-browser.packages."x86_64-linux".default
     mitmproxy
-    ryujinx
     pipes
-    materia-theme
-    qogir-icon-theme
-    pywal
-    pywalfox-native
     prismlauncher
-    bs-manager
     osu-lazer
-    wofi
-    swww
-    clipse
     libresprite
-    hyprshot
     mangohud
     alacritty
     chromium
     vscode
     vesktop
-    betterdiscordctl
-    nautilus
     cava
     fastfetch
     lutris
     protonup-qt
-    waybar
     obs-studio
   ];
 
@@ -66,20 +53,12 @@
       terminal = false;
       categories = [ "Application" "Network" "Music" ];
     };
-    wlx-overlay = {
-      name = "wlx-overlay";
-      genericName = "overlay";
-      exec = "appimage-run /home/imere/Music/WlxOverlay-S-v25.4.2-x86_64.AppImage";
-      terminal = false;
-      categories = [ "Application" "Network" ];
-    };
   };
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
     ".icons/Furina-v2".source = config/themes/Furina-v2;
-    ".config/hypr".source = config/hypr;
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.
@@ -98,20 +77,11 @@
       name = "Furina-v2";
       size = 24;
     };
-    theme = {
-      name = "Materia-dark";
-    };
-    iconTheme = {
-      name = "Qogir-Dark";
-    };
   };
 
   xdg.configFile."gtk-3.0/settings.ini".text = ''
     [Settings]
-    gtk-theme-name = Materia-dark
-    gtk-icon-theme-name = Qogir-dark
     gtk-cursor-theme-name = Furina-v2
-    gtk-font-name = Cantarell 11
   '';
 
   xresources.properties = {
@@ -143,7 +113,6 @@
   #
   home.sessionVariables = {
     EDITOR = "code";
-    RADV_PERFTEST = "vr";
     BROWSER = "zen";
     GTK_USE_PORTAL = 1;
   };
