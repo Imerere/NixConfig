@@ -125,9 +125,6 @@
     };
   };
 
-  # Add certificates
-  security.pki.certificates = [(builtins.readFile config/certificates/mitmproxy-ca-cert.pem)];
-
   # Enable steam
   programs.steam = {
     enable = true;
