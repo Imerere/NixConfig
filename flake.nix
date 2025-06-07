@@ -19,11 +19,11 @@
 
   outputs = { nixpkgs, home-manager, nur, ... } @ inputs:
   {
-    nixosConfigurations.default = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.pingu = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = { inherit inputs; };
         modules = [
-          ./hosts/default/configuration.nix
+          ./hosts/pingu/configuration.nix
           home-manager.nixosModules.home-manager
         ];
       };
