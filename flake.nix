@@ -35,4 +35,5 @@
         home-manager.nixosModules.home-manager
       ];
     };
+  };
 }
