@@ -121,7 +121,7 @@
   };
 
   home-manager = {
-    extraSpecialArgs = { inherit inputs; inherit lib; };
+    extraSpecialArgs = { inherit inputs; };
     users = {
       "imere" = import ./home.nix;
     };
