@@ -18,7 +18,7 @@
 
   home.activation = {
       # This removes conflicting files and lets home-manager take control.
-      removeConflicts = hm.dag.entryBefore ["checkLinkTargets"] ''
+      removeConflicts = lib.hm.dag.entryBefore ["checkLinkTargets"] ''
         echo "Removing conflicting files..."
         rm -rf ~/.config/fish ~/.config/starship.toml ~/.icons/Furina-v2 ~/.config/hypr
       '';
