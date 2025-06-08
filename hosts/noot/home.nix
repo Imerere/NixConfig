@@ -58,20 +58,36 @@
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
-    ".icons/Furina-v2".source = config/themes/Furina-v2;
-    ".config/fish".source = config/fish;
-    ".config/starship.toml".source = config/starship.toml;
-    # # Building this configuration will create a copy of 'dotfiles/screenrc' in
-    # # the Nix store. Activating the configuration will then make '~/.screenrc' a
-    # # symlink to the Nix store copy.
-    # {xdg.config}.source = ./config;
+    ".icons/Furina-v2" = {
+      source = config/themes/Furina-v2;
+      force = true;
+    };
 
-    # # You can also set the file content immediately.
-    # ".gradle/gradle.properties".text = ''
-    #   org.gradle.console=verbose
-    #   org.gradle.daemon.idletimeout=3600000
-    # '';
+    ".config/hypr" = {
+      source = config/hypr;
+      force = true;
+    };
+
+    ".config/fish" = {
+      source = config/fish;
+      force = true;
+    };
+
+    ".config/starship.toml" = {
+      source = config/starship.toml;
+      force = true;
+    };
+
+    # Example for directly setting text
+    # ".gradle/gradle.properties" = {
+    #   text = ''
+    #     org.gradle.console=verbose
+    #     org.gradle.daemon.idletimeout=3600000
+    #   '';
+    #   force = true;
+    # };
   };
+
 
   gtk = {
     enable = true;
