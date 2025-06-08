@@ -21,7 +21,7 @@
   {
     nixosConfigurations.pingu = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        specialArgs = { inherit inputs; };
+        specialArgs = { inherit inputs; lib = pkgs.lib; };
         modules = [
           ./hosts/pingu/configuration.nix
           home-manager.nixosModules.home-manager
@@ -29,7 +29,7 @@
       };
     nixosConfigurations.noot = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
-      specialArgs = { inherit inputs; };
+      specialArgs = { inherit inputs; lib = pkgs.lib; };
       modules = [
         ./hosts/noot/configuration.nix
         home-manager.nixosModules.home-manager
