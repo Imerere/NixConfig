@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, inputs, lib, ... }:
 
 {
   # Home Manager needs a bit of information about you and the paths it should
@@ -18,7 +18,7 @@
 
   home.activation = {
       # This removes conflicting files and lets home-manager take control.
-      removeConflicts = lib.hm.dag.entryBefore ["checkLinkTargets"] ''
+      removeConflicts = hm.dag.entryBefore ["checkLinkTargets"] ''
         echo "Removing conflicting files..."
         rm -rf ~/.config/fish ~/.config/starship.toml ~/.icons/Furina-v2 ~/.config/hypr
       '';
