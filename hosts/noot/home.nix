@@ -31,7 +31,6 @@
     mitmproxy
     pipes
     prismlauncher
-    osu-lazer
     libresprite
     mangohud
     alacritty
