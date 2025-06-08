@@ -202,7 +202,8 @@
     wget
     wl-clipboard
     material-symbols
-    python3Packages.pygobject3
+    python313Packages.pygobject3
+    python313Packages.pip
     python2
     python3
     swaynotificationcenter
