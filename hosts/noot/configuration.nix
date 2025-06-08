@@ -26,7 +26,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "noot"; # Define your hostname.
-  networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  networking.networkmanager.enable = true;  # Enables wireless support via networkmanager
 
   # Enable experimental features
   nix.settings.experimental-features = ["nix-command" "flakes"];
