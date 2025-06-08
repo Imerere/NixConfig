@@ -183,6 +183,7 @@
     wl-clipboard
     material-symbols
     python313Packages.pygobject3
+    python313Packages.pydbus
     python313Packages.pip
     python2
     python3
