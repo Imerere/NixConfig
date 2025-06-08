@@ -16,6 +16,13 @@
 
   home.stateVersion = "25.05"; # Please read the comment before changing.
 
+  home.activation = {
+      # This removes conflicting files and lets home-manager take control.
+      removeConflicts = lib.hm.dag.entryBefore ["checkLinkTargets"] ''
+        echo "Removing conflicting files..."
+        rm -rf ~/.config/fish ~/.config/starship.toml ~/.icons/Furina-v2 ~/.config/hypr
+      '';
+  };
   # The home.packages option allows you to install Nix packages into your
   # environment.
   nixpkgs.config = {
