@@ -22,6 +22,7 @@
     allowUnfree = true;
   };
   home.packages = with pkgs; [
+    moonlight-qt
     gamescope
     krita
     btop
