@@ -20,7 +20,14 @@
 
   # Gnome Virtual Filesystem
   services.gvfs.enable = true;
-
+  
+  # Add swap
+  swapDevices = [
+  {
+    device = "/swapfile";
+    size = 8192; # Size in MB, 8G = 8192
+  }
+];
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
