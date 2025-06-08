@@ -81,6 +81,7 @@
     ".icons/Furina-v2".source = config/themes/Furina-v2;
     ".config/hypr".source = config/hypr;
     ".config/fish".source = config/fish;
+    ".config/starship.toml" = config/starship.toml;
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.
