@@ -22,6 +22,7 @@
     allowUnfree = true;
   };
   home.packages = with pkgs; [
+    anydesk
     moonlight-qt
     gamescope
     krita
