@@ -179,6 +179,10 @@
             };
         };
       })
+    SDL2
+    SDL2_image
+    SDL2_mixer
+    SDL2_ttf
     ffmpeg
     rar
     p7zip
