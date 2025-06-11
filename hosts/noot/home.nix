@@ -47,6 +47,12 @@
     obs-studio
   ];
 
+  services.onedrive = {
+    enable = true;
+    enableMonitor = true; # auto sync
+    syncDir = "/home/imere/Documents/Projects/OneDrive"; # change as needed
+  };
+
   xdg.desktopEntries = {
     cider = {
       name = "Cider";
