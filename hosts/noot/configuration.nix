@@ -185,6 +185,7 @@
     python313Packages.pygobject3
     python313Packages.dbus-python
     python313Packages.pip
+    python313Packages.pygame
     python2
     python3
     swaynotificationcenter

@@ -179,10 +179,6 @@
             };
         };
       })
-    SDL2
-    SDL2_image
-    SDL2_mixer
-    SDL2_ttf
     ffmpeg
     rar
     p7zip
@@ -209,6 +205,7 @@
     python313Packages.pygobject3
     python313Packages.pydbus
     python313Packages.pip
+    python313Packages.pygame
     python2
     python3
     swaynotificationcenter
