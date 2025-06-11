@@ -22,7 +22,6 @@
     allowUnfree = true;
   };
   home.packages = with pkgs; [\
-    whatsapp-for-mac
     anydesk
     moonlight-qt
     gamescope
