@@ -215,6 +215,12 @@
     nodejs_24
   ];
 
+  services.onedrive = {
+    enable = true;
+    enableMonitor = true; # auto sync
+    syncDir = "/home/imere/Documents/Projects/OneDrive"; # change as needed
+  };
+
   services.displayManager.sddm = {
     enable = true;
     package = pkgs.kdePackages.sddm;

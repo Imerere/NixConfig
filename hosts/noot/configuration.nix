@@ -195,6 +195,12 @@
     nodejs_24
   ];
 
+  services.onedrive = {
+    enable = true;
+    enableMonitor = true; # auto sync
+    syncDir = "/home/imere/Documents/Projects/OneDrive"; # change as needed
+  };
+
 
   systemd.packages = with pkgs; [ lact ];
   systemd.services.lactd.wantedBy = ["multi-user.target"];
