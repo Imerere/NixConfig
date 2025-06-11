@@ -22,6 +22,7 @@
     allowUnfree = true;
   };
   home.packages = with pkgs; [
+    whatsapp-for-mac
     anydesk
     gamescope
     krita
