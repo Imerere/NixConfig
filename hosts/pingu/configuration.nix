@@ -127,6 +127,9 @@
     };
   };
 
+  # usbmuxd
+  services.usbmuxd.enable = true;
+
   # SUNSHINE REMOTE DESKTOP
   services.sunshine = {
     enable = true;
