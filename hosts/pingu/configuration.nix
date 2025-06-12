@@ -14,6 +14,7 @@
   # Kernel
   boot.kernelPackages = pkgs.linuxPackages_zen;
     boot.kernelParams = [
+    "v4l2loopback"
     "quiet"
     "nowatchdog"
   ];
@@ -134,6 +135,7 @@
     enableVirtualCamera = true;
     enable = true;
   };
+
   # SUNSHINE REMOTE DESKTOP
   services.sunshine = {
     enable = true;
