@@ -22,6 +22,7 @@
     allowUnfree = true;
   };
   home.packages = with pkgs; [
+    usbmuxd
     droidcam
     anydesk
     gamescope
