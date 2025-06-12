@@ -17,17 +17,10 @@
     "quiet"
     "nowatchdog"
   ];
-  boot.kernelModules = [ 
-    "v4l2loopback" 
-  ];
-  boot.extraModulePackages = with config.boot.kernelPackages; [
-    v4l2loopback
-  ];
-  boot.extraModprobeConfig = ''
-    options v4l2loopback video_nr=1 exclusive_caps=1 card_label="OBS Virtual Camera" devices=1
-  '';
   # Gnome Virtual Filesystem
   services.gvfs.enable = true;
+
+  services.flatpak.enable = true;
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
