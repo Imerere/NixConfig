@@ -20,8 +20,6 @@
   # Gnome Virtual Filesystem
   services.gvfs.enable = true;
 
-  services.flatpak.enable = true;
-
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
