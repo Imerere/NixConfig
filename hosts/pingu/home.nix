@@ -56,7 +56,6 @@
     lutris
     protonup-qt
     waybar
-    obs-studio
   ];
 
   xdg.desktopEntries = {

@@ -130,8 +130,10 @@
   # usbmuxd
   programs.droidcam.enable = true;
   services.usbmuxd.enable = true;
-  programs.obs-studio.enableVirtualCamera = true;
-
+  programs.obs-studio = {
+    enableVirtualCamera = true;
+    enable = true;
+  };
   # SUNSHINE REMOTE DESKTOP
   services.sunshine = {
     enable = true;
