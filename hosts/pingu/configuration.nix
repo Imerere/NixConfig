@@ -24,7 +24,7 @@
     v4l2loopback
   ];
   boot.extraModprobeConfig = ''
-    options v4l2loopback exclusive_caps=1 video_nr=1 card_label="OBS Virtual Camera"
+    options v4l2loopback video_nr=1 exclusive_caps=1 card_label="OBS Virtual Camera" devices=1
   '';
   # Gnome Virtual Filesystem
   services.gvfs.enable = true;
