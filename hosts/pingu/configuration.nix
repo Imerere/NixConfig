@@ -129,6 +129,7 @@
 
   # usbmuxd
   services.usbmuxd.enable = true;
+  programs.obs-studio.enableVirtualCamera = true;
 
   # SUNSHINE REMOTE DESKTOP
   services.sunshine = {
