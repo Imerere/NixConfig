@@ -128,6 +128,7 @@
   };
 
   # usbmuxd
+  programs.droidcam.enable = true;
   services.usbmuxd.enable = true;
   programs.obs-studio.enableVirtualCamera = true;
 

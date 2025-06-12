@@ -22,7 +22,6 @@
     allowUnfree = true;
   };
   home.packages = with pkgs; [
-    droidcam
     anydesk
     gamescope
     krita
