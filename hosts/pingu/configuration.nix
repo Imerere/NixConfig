@@ -186,6 +186,7 @@
             };
         };
       })
+    brightnessctl
     libdbusmenu
     dbus
     libdbusmenu-gtk3
