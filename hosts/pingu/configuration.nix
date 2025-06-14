@@ -186,6 +186,8 @@
             };
         };
       })
+    wine
+    wine64
     brightnessctl
     libdbusmenu
     dbus
