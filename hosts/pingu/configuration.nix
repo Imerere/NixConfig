@@ -196,7 +196,7 @@
     imagemagick
     acpi
     bluez
-    bluez-utils
+    bluez-tools
     rustup
     playerctl
     ffmpeg
