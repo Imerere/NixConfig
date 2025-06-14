@@ -161,6 +161,8 @@
     nerd-fonts.jetbrains-mono
     nerd-fonts.hack
     noto-fonts-emoji
+    ttf-iosevka
+    otf-hermit-nerd
     noto-fonts
     dejavu_fonts
     font-awesome
@@ -186,6 +188,17 @@
             };
         };
       })
+    libdbusmenu
+    dbus
+    libdbusmenu-gtk3
+    gtk-layer-shell
+    bottom
+    imagemagick
+    acpi
+    bluez
+    bluez-utils
+    rustup
+    playerctl
     ffmpeg
     rar
     p7zip
