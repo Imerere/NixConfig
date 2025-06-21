@@ -186,6 +186,7 @@
             };
         };
       })
+    protontricks
     wine
     wine64
     brightnessctl
