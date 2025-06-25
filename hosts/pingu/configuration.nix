@@ -178,7 +178,7 @@
   ];
 
   virtualisation.virtualbox.host.enable = true;
-   users.extraGroups.vboxusers.members = [ "imere" ];
+  users.extraGroups.vboxusers.members = [ "imere" ];
 
   environment.systemPackages =  with pkgs; [
   (pkgs.callPackage ./config/sddm/sddm-astronaut.nix {
@@ -190,6 +190,7 @@
             };
         };
       })
+    blender
     protontricks
     wine
     wine64
