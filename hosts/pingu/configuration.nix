@@ -177,9 +177,6 @@
     "python-2.7.18.8"
   ];
 
-  virtualisation.virtualbox.host.enable = true;
-  users.extraGroups.vboxusers.members = [ "imere" ];
-
   environment.systemPackages =  with pkgs; [
   (pkgs.callPackage ./config/sddm/sddm-astronaut.nix {
     theme = "hyprland_kath";
@@ -190,6 +187,7 @@
             };
         };
       })
+    quickshell.packages."x86_64-linux".default
     blender
     protontricks
     wine
