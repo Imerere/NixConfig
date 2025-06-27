@@ -1,3 +1,7 @@
+# Edit this configuration file to define what should be installed on
+# your system.  Help is available in the configuration.nix(5) man page
+# and in the NixOS manual (accessible by running ‘nixos-help’).
+
 { config, pkgs, inputs, lib, ... }:
 
 {
@@ -96,7 +100,7 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
-    jack.enable = true;
+    #jack.enable = true;
     #media-session.enable = true;
   };
 
@@ -168,7 +172,6 @@
   nixpkgs.config.permittedInsecurePackages = [
     "python-2.7.18.8"
   ];
-
   environment.systemPackages =  with pkgs; [
   (pkgs.callPackage ./config/sddm/sddm-astronaut.nix {
     theme = "hyprland_kath";
@@ -179,11 +182,6 @@
             };
         };
       })
-    freetype
-    inputs.quickshell.packages."x86_64-linux".default
-    ddcutil
-    lm_sensors
-    blender
     protontricks
     wine
     wine64
