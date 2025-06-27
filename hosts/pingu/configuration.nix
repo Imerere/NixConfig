@@ -182,7 +182,7 @@
             };
         };
       })
-    quickshell.package."x86_64-linux".default
+    inputs.quickshell.package."x86_64-linux".default
     protontricks
     wine
     wine64
