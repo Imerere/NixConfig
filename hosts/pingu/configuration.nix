@@ -179,6 +179,7 @@
             };
         };
       })
+    freetype
     inputs.quickshell.packages."x86_64-linux".default
     ddcutil
     lm_sensors
