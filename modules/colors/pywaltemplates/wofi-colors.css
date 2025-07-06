@@ -1,0 +1,56 @@
+* {{
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 24px;
+    color: {foreground};
+}}
+
+window {{
+    border-width: 0px;
+    border-color: {color1};
+    border-style: solid;
+    background-color: {background};
+    border-radius: 0px;
+}}
+
+#input {{
+    border-radius: 8px;
+    border: 0px;
+    color: color-mix(in srgb, {color8} 20%, transparent);
+    background-color: {color0};
+}}
+
+#selected *,
+#selected {{
+    color: color-mix(in srgb, {color8} 20%, transparent);
+    background-color: color-mix(in srgb, {color8} 20%, transparent);
+    border-radius: 8px;
+}}
+
+#inner-box {{
+    margin: 0px;
+    border: none;
+    background-color: transparent;
+}}
+
+#img {{
+    border-radius: 10px;
+}}
+
+#outer-box {{
+    margin: 5px;
+    border: none;
+    background-color: transparent;
+}}
+
+#entry,
+#entry focus,
+#entry selected {{
+    border: none;
+    background-color: transparent;
+    border-radius: 8px;
+}}
+
+#entry focus,
+#entry selected {{
+    color: {background};
+}}
