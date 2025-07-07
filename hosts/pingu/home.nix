@@ -11,7 +11,7 @@
     ../../modules/programs/obs.nix
     ../../modules/programs/yazi.nix
     ../../modules/programs/wofi.nix
-    ../../modules/programs/cider.nix
+    # ../../modules/programs/cider.nix
     ../../modules/programs/vscode.nix
     ../../modules/programs/vesktop.nix
     ../../modules/programs/chromium.nix
